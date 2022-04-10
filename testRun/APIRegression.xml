@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="Regression run" verbose="10" thread-count="90">
+
+    <test name="Tests suite" parallel="methods">
+        <classes>
+            <class name="api.onboardingresource.UserRegisterTest"/>
+        </classes>
+    </test>
+</suite>

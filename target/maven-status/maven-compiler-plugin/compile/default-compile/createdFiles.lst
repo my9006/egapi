@@ -1,0 +1,4 @@
+helpers\onboardingresource\payloads\RegisterUserRequestBody.class
+helpers\BaseApiHelper.class
+helpers\onboardingresource\OnboardingHelper.class
+utils\TestUtils.class
