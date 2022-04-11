@@ -1,7 +1,7 @@
 package ui;
 
 import api.onboardingresource.dataProviders.UserDataProvider;
-import helpers.flows.RegistrationFlows;
+import helpers.flows.OnboardingFlows;
 import helpers.pages.ConfirmEmailPage;
 import helpers.pages.RegisterPage;
 import org.testng.annotations.Test;
@@ -40,8 +40,8 @@ public class RegistrationTest extends BaseUITest {
         final RegisterPage registerPage = new RegisterPage();
         registerPage.openPage();
         final String nonUniqueEmail = TestUtils.getRandomEmail();
-        final RegistrationFlows registrationFlows = new RegistrationFlows();
-        registrationFlows.registerUser(nonUniqueEmail);
+        final OnboardingFlows onboardingFlows = new OnboardingFlows();
+        onboardingFlows.registerUser(nonUniqueEmail);
         registerPage.checkNonUniqueEmail(nonUniqueEmail);
     }
 

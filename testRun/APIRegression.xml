@@ -5,6 +5,8 @@
     <test name="Tests suite" parallel="methods">
         <classes>
             <class name="api.onboardingresource.UserRegisterTest"/>
+            <class name="api.onboardingresource.FillUserInfoTest"/>
+            <class name="api.onboardingresource.EnableUserTest"/>
         </classes>
     </test>
 </suite>

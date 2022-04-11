@@ -3,8 +3,6 @@ package api.onboardingresource;
 import api.onboardingresource.dataProviders.UserDataProvider;
 import helpers.onboardingresource.OnboardingHelper;
 import helpers.onboardingresource.payloads.RegisterUserRequestBody;
-import io.restassured.response.Response;
-import io.restassured.response.ValidatableResponse;
 import org.json.JSONObject;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
