@@ -12,6 +12,7 @@ import static utils.TestUtils.*;
 public class SetPasswordTest extends BaseUITest {
 
     private OnboardingFlows onboardingFlows;
+    private String token;
 
     @BeforeClass(alwaysRun = true)
     public void setUp() {

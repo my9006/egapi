@@ -4,9 +4,8 @@
 
     <test name="Tests suite" parallel="methods">
         <classes>
-            <!--            <class name="ui.RegistrationTest"/>-->
+            <class name="ui.RegistrationTest"/>
             <class name="ui.SetPasswordTest"/>
-
         </classes>
     </test>
 </suite>
