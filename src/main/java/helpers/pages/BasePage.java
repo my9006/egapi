@@ -2,6 +2,7 @@ package helpers.pages;
 
 import helpers.BaseUIHelper;
 import lombok.Getter;
+import org.json.JSONObject;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -20,6 +21,11 @@ public abstract class BasePage<T extends LoadableComponent<T>> extends LoadableC
     private final static Duration SLEEP = Duration.ofSeconds(3);
     protected WebDriver driver;
     protected Wait<WebDriver> wait;
+    public static ThreadLocal<String> token = new ThreadLocal<>();
+
+    public void setUser(String token) {
+        BasePage.token.set(token);
+    }
 
     public BasePage() {
         this.driver = BaseUIHelper.getDriver();
