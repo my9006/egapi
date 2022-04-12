@@ -2,13 +2,9 @@ package helpers.pages;
 
 import helpers.BaseUIHelper;
 import lombok.Getter;
-import org.json.JSONObject;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.FluentWait;
-import org.openqa.selenium.support.ui.LoadableComponent;
-import org.openqa.selenium.support.ui.Wait;
+import org.openqa.selenium.support.ui.*;
 
 import java.time.Duration;
 import java.util.NoSuchElementException;
@@ -55,12 +51,26 @@ public abstract class BasePage<T extends LoadableComponent<T>> extends LoadableC
 
     public void clearText(WebElement textField) {
         waitForElement(textField);
+        scrollIntoView(textField);
         textField.clear();
     }
 
     protected void type(WebElement element, String text) {
         waitForElement(element);
+        scrollIntoView(element);
+        element.click();
         element.sendKeys(text);
+    }
+
+    protected void typeWithSearch(WebElement element, String text) {
+       type(element, text);
+       element.sendKeys(Keys.ENTER);
+    }
+
+    protected void selectElementFromDropDown(WebElement dropdown, String item) {
+        waitForElement(dropdown);
+        final Select select = new Select(dropdown);
+        select.selectByValue(item);
     }
 
     protected WebElement scrollIntoView(WebElement element) {
@@ -75,6 +85,7 @@ public abstract class BasePage<T extends LoadableComponent<T>> extends LoadableC
 
     protected void checkText(WebElement element, String text) {
         waitForElement(element);
+        scrollIntoView(element);
         assertEquals(element.getText(), text);
     }
 
