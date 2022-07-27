@@ -1,1 +1,8 @@
-api\onboardingresource\UserRegisterTest.class
+ui/PersonalInformationPageTest.class
+api/onboardingresource/dataProviders/UserDataProvider.class
+ui/SetPasswordTest.class
+api/onboardingresource/EnableUserTest.class
+api/onboardingresource/UserRegisterTest.class
+ui/RegistrationTest.class
+api/onboardingresource/FillUserInfoTest.class
+ui/BaseUITest.class
